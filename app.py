@@ -7,7 +7,11 @@ import os
 
 load_dotenv()
 
+## Load environment variables from .env file
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAPI_KEY")
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+os.environ["LANGCHAIN_PROJECT"] = os.getenv("LANGCHAIN_PROJECT")
 
 app = Flask(__name__)
 
