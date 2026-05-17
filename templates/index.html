@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Bot</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            padding: 40px;
+        }
+
+        input{
+            width: 300px;
+            padding: 10px;
+        }
+
+        button{
+            padding: 10px;
+        }
+
+        .response{
+            margin-top: 20px;
+            padding: 15px;
+            background: #f2f2f2;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Chat Bot</h1>
+
+    <form method="POST">
+
+        <input 
+            type="text" 
+            name="question" 
+            placeholder="Ask something..."
+            required
+        >
+
+        <button type="submit">Send</button>
+
+    </form>
+
+    {% if response %}
+
+        <div class="response">
+            {{ response }}
+        </div>
+
+    {% endif %}
+
+</body>
+</html>
